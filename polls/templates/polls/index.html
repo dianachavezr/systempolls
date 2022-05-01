@@ -1,0 +1,16 @@
+{% extends 'polls/base.html' %}
+
+
+{% block main_content %}
+
+{% if latest_questions %}
+    <ul class="form h2 "  >
+      {%for question in latest_questions %}
+            <li><a href= {% url "polls:detail" question.id %} style="color:black"><b>{{question.question_text}}</b></a></li>
+      {% endfor %}
+    </ul>
+{%else%}
+<p>No hay preguntas, por favor incluya algunas</p>
+{% endif %}
+
+{% endblock %}
