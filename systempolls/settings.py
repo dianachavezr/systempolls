@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+from dotenv import load_dotenv
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'systempolls.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd9ek404a9ao626',
+        'USER':'gkcegaxkuqwsjy',
+        'PASSWORD':'4caaa4bcffec837dc417beffff051dc8b9cd37c7453ead55b0fe95d6e6f98e87',
+        'HOST':'postgres://gkcegaxkuqwsjy:4caaa4bcffec837dc417beffff051dc8b9cd37c7453ead55b0fe95d6e6f98e87@ec2-52-3-200-138.compute-1.amazonaws.com:5432/d9ek404a9ao626',
+        'PORT':'5432',
     }
 }
 
