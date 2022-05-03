@@ -1,1 +1,1 @@
-web: python manage.py runserver 0.0.0.0:SPORT
+web: gunicorn systempolls.wsgi --log-file -
